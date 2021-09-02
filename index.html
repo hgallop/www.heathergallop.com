@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Righteous|Pacifico" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" rel="stylesheet">
+        <style>
+            body {
+                font-family: Pacifico, cursive;
+                background-image: url("http://res.cloudinary.com/hgallopcloud/image/upload/v1501511994/treetops_o0qnrq.jpg");
+            }
+            .navigation {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .navbar {
+                background: #006400;
+            }
+            .navbar-nav > li > a {
+                color: white !important;
+            }
+            .navbar-brand {
+                font-family: Pacifico, cursive;
+            }
+            .block {
+                background: rgba(0, 191, 66, .9);
+                color: white;
+                width: 90%;
+                margin: 80px auto;
+                border-radius: 15px;
+            }
+            h1,
+            h2,
+            h3 {
+                padding: 1vw 0;
+                margin: 0;
+            }
+            .bio {
+                text-indent: 7vw;
+            }
+            .training-list {
+            
+            }
+            p {
+                padding: 2%;
+                font-family: 'Righteous', sans-serif;
+                font-size: 19px;
+            }
+            .project {
+                text-align: center;
+            }
+            .project-image {
+                width: 315px;
+            }
+            .project-link {
+                display: block;
+                color: white;
+            }
+            .project-link:hover,
+            .project-link:focus {
+                color: #006400;
+            }
+            ul li {
+                font-family: 'Righteous', sans-serif;
+                font-size: 19px; 
+            }
+            .link {
+                color: white;
+                text-decoration: underline;
+            }
+            .link:hover,
+            .link:focus {
+                color: #006400;
+            }
+            .profimg {
+                padding: 10px;
+                display: block;
+                max-width: 100%;
+                width: 25%;
+                margin: 20px auto;
+            }
+            .upwork-button {
+                color: #494949;
+                background: white;
+            }
+            .upwork-button:before {
+                content: '';
+                display: block;
+                background: url(https://res.cloudinary.com/hgallopcloud/image/upload/c_scale,w_56/v1569368716/upworkicon_r4gez5.png);
+                width: 56px;
+                height: 39px;
+                background-size: 35%;
+                background-repeat: no-repeat;
+                position: absolute;
+                left: 10px;
+                top: 30px;
+                transform: translate(0, -50%);
+            }
+            .butcol {
+                background-color: #303844;
+                color: white;
+            }
+            button {
+                margin: 1vw 0;
+                min-width: 118px;
+                position: relative;
+            }
+            button:hover {
+                cursor: pointer;
+            }
+            .badge {
+                border-radius: 10%;
+            }
+            footer {
+                background: rgba(0, 191, 66, .9);
+                border-radius: 15px;
+                width: 30%;
+                margin: 0 auto;
+                padding: 5px;
+            }
+            footer p {
+                font-family: Pacifico, cursive;
+                color: #006400;
+                margin: 0 auto;
+                padding: 0;
+                font-size: 2rem;
+            }
+            footer a {
+                color: white;
+                padding: 10px 0;
+                margin: 10px 0;
+            }
+            footer a:hover {
+                color: #006400;
+            }
+            @media screen and (min-width: 1200px) {
+                .project-items {
+                    display: grid;
+                    grid-template-columns: repeat(2, 50%);
+                }
+            }
+            @media screen and (min-width: 1680px) {
+                .project-items {
+                    grid-template-columns: repeat(3, 33%);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            //training and courses
+            var training = [
+            {
+                siteName: "Udacity",
+                siteURL: "https://www.udacity.com",
+                courses: ["Intro to HTML and CSS", "Intro to Java Script", "ES6 - JavaScript Improved", "Linux Command Line Basics", "How to Use Git and Git Hub", "Basic JavaScript", "Grow with Google Challenge: Android Basics", "Android Basics: Multiscreen Apps", "Java Programming Basics", "Android Basics: Networking"],
+                coursesURL : ["https://www.udacity.com/course/intro-to-html-and-css--ud001",
+                            "https://www.udacity.com/course/intro-to-javascript--ud803",
+                            "https://www.udacity.com/course/es6-javascript-improved--ud356",
+                            "https://www.udacity.com/course/linux-command-line-basics--ud595", 
+                            "https://www.udacity.com/course/how-to-use-git-and-github--ud775", 
+                            "#",
+                            "https://www.udacity.com/grow-with-google", 
+                            "https://www.udacity.com/course/android-basics-multiscreen-apps--ud839",
+                            "https://www.udacity.com/course/java-programming-basics--ud282", 
+                            "https://www.udacity.com/course/android-basics-networking--ud843"],
+                //Grow with Google Challenge
+                subCourses: ["Android Basics: User Interface", "Android Basics: User Input"],
+                subCoursesURL: ["https://www.udacity.com/course/android-basics-user-interface--ud834", 
+                                "https://www.udacity.com/course/android-basics-user-input--ud836"]
+            },
+            {
+                siteName: "Codecademy",
+                siteURL: "https://www.codecademy.com/",
+                courses: ["Learn HTML and CSS", "Learn Responsive Design", "Learn Java Script", "Learn the Command Line", "Learn HTML (Updated)", "Learn CSS (Updated)", "Learn Sass"],
+                coursesURL: ["#", 
+                            "https://www.codecademy.com/learn/learn-responsive-design", 
+                            "#", 
+                            "#", 
+                            "https://www.codecademy.com/learn/learn-html", 
+                            "https://www.codecademy.com/learn/learn-css", 
+                            "https://www.codecademy.com/learn/learn-sass"]
+            },
+            {
+                siteName: "Free Code Camp",
+                siteURL: "https://www.freecodecamp.org/",
+                courses: ["Completed 308 Items on the \"MAP\""],
+                coursesURL: ["#"],
+                //The Map
+                subCourses: ["HTML5 and CSS", "Responsive Design with Bootstrap", "jQuery", "Basic Front End Development Projects", "Basic Java Script", "Object Oriented and Functional Programming", "Basic Algorithm Scripting", "JSON APIs and Ajax", "Intermediate Front End Development Projects", "Intermediate Algorithm Scripting", "Video Challenges"],
+                subCoursesURL: ["#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#"],
+                //Video Challenges
+                nestedSubCourses: ["Computer Basics", "The DOM", "Java Script Lingo", "Chrome Developer Tools", "Big O Notation"],
+                nestedSubCoursesURL: ["#", "#", "#", "#", "#"]
+            },
+            {
+                siteName: "edX",
+                siteURL: "https://www.edx.org/",
+                courses: ["Introduction to Linux","Introduction to Computer Science"],
+                coursesURL: ["https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-1", "https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x"]
+            },
+            {
+                siteName: "Watch and Code",
+                siteURL: "https://watchandcode.com/",
+                courses: ["Practical JS"],
+                coursesURL: ["https://watchandcode.com/p/practical-javascript"] 
+            },
+            {
+                siteName: "Coursera",
+                siteURL: "https://www.coursera.org/",
+                courses: ["Programing Foundations with Java Script, HTML, and CSS"],
+                coursesURL: ["https://www.coursera.org/learn/duke-programming-web"] 
+            },
+            {
+                siteName: "Khan Academy",
+                siteURL: "https://www.khanacademy.org/",
+                courses: ["Computer Programming","Computer Science", "Hour of Code", "NOVA Labs Cybersecurity"],
+                coursesURL: ["https://www.khanacademy.org/computing/computer-programming", 
+                            "https://www.khanacademy.org/computing/computer-science", 
+                            "https://www.khanacademy.org/hourofcode", 
+                            "https://www.khanacademy.org/partner-content/nova/cybersecurity"],
+                //Computer Programming
+                subCourses: ["Intro to JS: Drawing and Animation", "Intro to HTML and CSS: Making Webpages", "Intro to SQL: Querying and Managing Data", "Advanced JS: Games & Visualizations", "Advanced JS: Natural Simulations", "HTML/JS: Making Webpages Interactive", "HTML/JS: Making Webpages Interactive with jQuery"],
+                subCoursesURL: ["https://www.khanacademy.org/computing/computer-programming/programming", 
+                                "https://www.khanacademy.org/computing/computer-programming/html-css", 
+                                "https://www.khanacademy.org/computing/computer-programming/sql", 
+                                "https://www.khanacademy.org/computing/computer-programming/programming-games-visualizations", 
+                                "https://www.khanacademy.org/computing/computer-programming/programming-natural-simulations", 
+                                "https://www.khanacademy.org/computing/computer-programming/html-css-js", 
+                                "https://www.khanacademy.org/computing/computer-programming/html-js-jquery"],
+                //Computer Science
+                nestedSubCourses: ["Algorithms", "Journey into Cryptography", "Journey into Information Theory", "Internet 101"],
+                nestedSubCoursesURL: ["https://www.khanacademy.org/computing/computer-science/algorithms", 
+                                    "https://www.khanacademy.org/computing/computer-science/cryptography", 
+                                    "https://www.khanacademy.org/computing/computer-science/informationtheory", 
+                                    "https://www.khanacademy.org/computing/computer-science/internet-intro"]
+            },
+            {
+                siteName: "Sololearn",
+                siteURL: "https://www.sololearn.com",
+                courses: ["Java", "HTML", "CSS", "Java Script"],
+                coursesURL: ["https://www.sololearn.com/Course/Java/", 
+                            "https://www.sololearn.com/Course/HTML/", 
+                            "https://www.sololearn.com/Course/CSS/", 
+                            "https://www.sololearn.com/Course/JavaScript/"] 
+            },
+            {
+                siteName: "Adobe KnowHow",
+                siteURL: "https://www.adobeknowhow.com/",
+                courses: ["Getting Started with ColdFusion"],
+                coursesURL: ["https://www.adobeknowhow.com/courselanding/getting-started-coldfusion-2016"] 
+            },
+            {
+                siteName: "Wes Bos",
+                siteURL: "https://wesbos.com/",
+                courses: ["CSS Grid"],
+                coursesURL: ["https://cssgrid.io/"] 
+            },
+            {
+                siteName: "Google - Analytics Academy",
+                siteURL: "https://analytics.google.com/analytics/academy/",
+                courses: ["Google Analytics for Beginners"],
+                coursesURL: ["https://analytics.google.com/analytics/academy/course/6"]
+            },
+            {
+                siteName: "Other Resources",
+                siteURL: "#",
+                courses: ["Linux Survival", "MDN Tutorials", "W3Schools Tutorials", "RegexOne", ""],
+                coursesURL: ["https://linuxsurvival.com/", 
+                            "https://developer.mozilla.org/en-US/docs/Web/Tutorials", 
+                            "https://www.w3schools.com/", 
+                            "https://regexone.com/", 
+                            "http://natureofcode.com/"] 
+            }
+            ];
+
+            //projects section
+            var projImages = [
+            {
+                src:
+                "https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.BdjjLa.small.02fe0186-2412-44d3-814c-98c9be74142b.png",
+                altText: "Adriene Mishler Tribute Page",
+                link: "https://codepen.io/hgallop/full/BdjjLa/",
+                description: "My first freeCodeCamp project and very first attempt at coding a page from scratch."
+            },
+            {
+                src:
+                "https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.dzQxqe.small.bae39972-8da4-406f-9dd5-5282e9bf3693.png",
+                altText: "ToDos",
+                link: "https://codepen.io/hgallop/full/dzQxqe/",
+                description: "Completed with Gordon Zhu's PracticalJS course. This project was a turning point that helped me really \"get\" how to use Java Script."
+            },
+            {
+                src: "https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.WEWXyo.small.4e2a4ccc-46ab-4aee-8234-7a4f3d2a6cf9.png",
+                altText: "My Interests",
+                link: "https://codepen.io/hgallop/full/WEWXyo",
+                description: "This project was from Cousera's Programming Foundations course by Duke University. This was an exercise in experimenting with HTML and CSS."
+            },
+            {
+                src: "https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.OxPowr.small.0026863b-36e3-4219-99f8-80e6dba6563f.png",
+                altText: "Experiment with Simple Buttons",
+                link: "https://codepen.io/hgallop/full/OxPowr/",
+                description: "This project was a fun exercise in learning how buttons are created, styled, and implemented."
+            },
+            {
+                src: "https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.JrYKNx.small.85436d6e-cc51-4963-8fd3-44ca33cbe75c.png",
+                altText: "Upload and Display Grayscale Image",
+                link: "https://codepen.io/hgallop/full/JrYKNx/",
+                description: "This project uses manipulation of the RGB values to show a colored image in grayscale. This required a programatic discovery and manipulation of the values of each pixel using Duke's Simple Image Library."
+            },
+            {
+                src: "https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.NaGwQw.small.548ec740-a88f-4d2b-b182-8a75761bbed1.png",
+                altText: "Green Screen Project",
+                link: "https://codepen.io/hgallop/full/NaGwQw/",
+                description: "This project takes an image with a green background and overlays it to a chosen background image. This required a programatic discovery and manipulation of the values of each mostly green pixel using Duke's Simple Image Library."
+            },
+            {
+                src: "https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.veLEOL.small.55284eab-0c9f-46e7-9aca-6ce2630a4090.png",
+                altText: "Fun with Images",
+                link: "https://codepen.io/hgallop/full/veLEOL/",
+                description: "This was a culmination of all the skills learned during Duke's Programming Foundations course. This allows the user to upload an image and use buttons to create different effects on the image."
+            },
+            {
+                src: "https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.veJYaY.small.c9422471-f7a0-45c0-9e85-d338dd6a9c49.png",
+                altText: "Todos with Styling",
+                link: "https://codepen.io/hgallop/full/veJYaY/",
+                description: "My most current version of the Todos project from Gordon Zhu's practical Java Script course. I was experimenting with different styling methods."
+            },
+            {
+            src: "https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.xPRpmx.small.94813a8c-6faa-45e7-ade3-cdea29d851fb.png",
+            altText: "Simple Slide Show",
+            link: "https://codepen.io/hgallop/full/xPRpmx/",
+            description: "This project was created as part of Khan Academy's Computer Programming course. This was my first slide show!"
+            },
+            {
+            src: "https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.MObrdx.small.41421386-a7b7-46e5-a4c1-0a53f3d32af7.png",
+            altText: "Simple Word Game",
+            link: "https://codepen.io/hgallop/full/MObrdx/",
+                description: "This project was created as part of Khan Academy's Computer Programming course. This allows the user to guess what the scramble word may be."
+            },
+            {
+            src: "https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.EobwRJ.small.46dbec28-124b-45e5-94b4-2509420eba26.png",
+            altText: "Random Quote Machine",
+            link: "https://codepen.io/hgallop/full/EobwRJ/",
+            description: "This was the first of the intermediate front end projects for freeCodeCamp."
+            },
+            {
+            src: "https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.xppjYL.small.6d9f67f9-8539-4ccb-8b67-bd8f0d2cb120.png",
+            altText: "Local Weather App",
+            link: "https://codepen.io/hgallop/full/xppjYL/"
+            },
+            {
+            src: "https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.xpYgxB.small.a3815646-2f14-48bc-833b-7e534fced5dc.png",
+            altText: "Wikipedia Search",
+            link: "https://codepen.io/hgallop/full/xpYgxB/"
+            },
+            {
+            src: "http://res.cloudinary.com/hgallopcloud/image/upload/c_scale,w_384/v1522589761/twitchtvstreamers_l00t64.jpg",
+            altText: "Twitch.tv Stream List",
+            link: "https://codepen.io/hgallop/full/MrGyya/"
+            },
+            ];
+
+        </script>
+        <div class="container-fluid">
+            <!-- Navigation Bar -->
+            <nav class="navbar fixed-top navbar-toggleable-sm navbar-light bg-faded">
+            <div id="navbarNav">
+                <ul class="navbar-nav navigation">
+                <li>
+                    <a class="navbar-brand" href="#top">hgallop</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#top">About<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#connect">Connect</a>
+                </li>
+                </li>
+                </ul>
+            </div>
+            </nav>
+            <!-- About Section -->
+            <a id="top"></a>
+            <div class="block">
+            <h1 class="text-center">Heather Gallop</h1>
+            <hr>
+            <img class="profimg" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1504625943/profileheadshot_kakusy.jpg" alt="Heather Gallop">
+            <h2 class="text-center">Web Developer</h2>
+            <!-- About me text -->
+            <p class="bio">My name is Heather Gallop. I am a self taught web developer from the small town of Stuart in Southwest Virginia. I work as a web developer and marketing coordinator for Momenta in Martinsville Virginia and I am a contracted web developer for Artist Republik in Providence, Rhode Island.</p>
+            <h3 class="text-center">Training and Courses</h3>
+            <br>
+            <a href="https://www.udacity.com/grow-with-google" target="_blank"><img class="profimg" src="http://res.cloudinary.com/hgallopcloud/image/upload/c_scale,h_251/v1516881744/GrowWithGoogleDeveloperChallengeScholarship_fipp2w.png" alt="Grow with Google Badge"/></a>
+            <a href="" target="_blank"></a>
+            <ul class="training-list">
+                <li>Udacity
+                <ul>
+                    <li>Intro to HTML and CSS</li>
+                    <li>Intro to Java Script</li>
+                    <li>ES6 (In Progress)</li>
+                    <li>Linux Command Line Basics</li>
+                    <li>How to Use Git and Git Hub</li>
+                    <li>Basic JavaScript</li>
+                    <li>Grow with Google Challenge: Android Basics
+                    <li>Android Basics: User Interface</li>
+                    <li>Android Basics: User Input</li>
+                    <li>Intro to Java: Functional Programming</li>
+                    <li>Android Basics: Multiscreen Apps (In Progress)</li>
+                    <li>Android Basics: Networking (In Progress)</li>
+                </ul></li>
+                </li>
+                <li>Codecademy
+                <ul>
+                    <li>Learn HTML and CSS</li>
+                    <li>Learn Responsive Design</li>
+                    <li>Learn Java Script</li>
+                    <li>Learn the Command Line</li>
+                    <li>Learn HTML (Updated)</li>
+                    <li>Learn CSS (Updated)</li>
+                    <li>Learn Sass</li>
+                </ul>
+                </li>
+                <li>Free Code Camp
+                <ul>
+                    <li>Completed the <a class="link"href="https://www.freecodecamp.org/certification/fcc143cd597/responsive-web-design" target="_blank">Responsive Web Design Certification</a>
+                    <ul>
+                        <li>Basic HTML and HTML 5</li>
+                        <li>Basic CSS</li>
+                        <li>Applied Visual Design</li>
+                        <li>Applied Acessibility</li>
+                        <li>Responsive Web Design Principles</li>
+                        <li>CSS Flexbox</li>
+                        <li>CSS Grid</li>
+                        <li>Responsive Web Design Projects</li>
+                    </ul>
+                    </li>
+                    <li>Javascript Algorithms And Data Structures Certification (In Progress)               <ul>
+                        <li>Basic Javscript</li>
+                        <li>ES6 (In Progress)</li>
+                    </ul></li>
+                    <li>Front End Libraries Certification (In Progress)
+                    <ul>
+                        <li>Bootstrap</li>
+                        <li>jQuery</li>
+                        <li>Sass (In Progress)</li>
+                        <li>Front End Libraries Projects (In Progress)</li>
+                    </ul></li>
+                    <li>Completed 308 Items on the "Legacy MAP"
+                    <ul>
+                        <li>HTML5 and CSS</li>
+                        <li>Responsive Design with Bootstrap</li>
+                        <li>jQuery</li>
+                        <li>Basic Front End Development Projects</li>
+                        <li>Basic Java Script</li>
+                        <li>Object Oriented and Functional Programming</li>
+                        <li>Basic Algorithm Scripting</li>
+                        <li>JSON APIs and Ajax</li>
+                        <li>Intermediate Front End Development Projects</li>
+                        <li>Intermediate Algorithm Scripting</li>
+                        <li>Video Challenges
+                        <ul>
+                            <li>Computer Basics</li>
+                            <li>The DOM</li>
+                            <li>Java Script Lingo</li>
+                            <li>Chrome Developer Tools</li>
+                            <li>Big O Notation</li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+                </ul>
+                </li>
+                <li>edX
+                <ul>
+                    <li>Introduction to Linux</li>
+                    <li>HarvardX CS50 Introduction to Computer Science (In Progress)</li>
+                </ul>
+                </li>
+                <li>Watch and Code
+                <ul>
+                    <li>Practical JS</li>
+                </ul>
+                </li>
+                <li>Coursera
+                <ul>
+                    <li>Duke Learn to Program: Programing Foundations with Java Script, HTML, and CSS
+                    </li>
+                    <li>Fundamentals of Graphic Design by California Institute of the Arts (In Progress)</li>
+                </ul>
+                </li>
+                <li>Khan Academy
+                <ul>
+                    <li>Computer Programming
+                    <ul>
+                        <li>Intro to JS: Drawing and Animation</li>
+                        <li>Intro to HTML and CSS: Making Webpages</li>
+                        <li>Intro to SQL: Querying and Managing Data</li>
+                        <li>Advanced JS: Games & Visualizations</li>
+                        <li>Advanced JS: Natural Simulations</li>
+                        <li>HTML/JS: Making Webpages Interactive</li>
+                        <li>HTML/JS: Making Webpages Interactive with jQuery</li>
+                    </ul>
+                    <li> Computer Science
+                    <ul>
+                        <li>Algorithms</li>
+                        <li>Journey into Cryptography (In Progress)</li>
+                        <li>Journey into Information Theory</li>
+                        <li>Internet 101</li>
+                    </ul>
+                    </li>
+                    <li>Hour of Code</li>
+                    <li>NOVA Labs Cybersecurity</li>
+                    </li>
+                </ul>
+                </li>
+        <li>Sololearn
+        <ul>
+            <li>Java</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Java Script</li>
+            </ul></li>
+        <li>Adobe KnowHow
+            <ul>
+            <li>Getting Started with ColdFusion</li>
+            </ul></li>
+                <li>Wes Bos 
+                <ul>
+                    <li>CSS Grid</li>
+                </ul></li>
+        <li>Google - Analytics Academy <ul>
+            <li>Google Analytics for Beginners</li>
+            </ul></li>
+        <li>Vue School
+        <ul>
+            <li>Vue.js Fundamentals</li>
+            <li>Vue.js Component Fundamentals (In Progress)</li>
+            <li>NuxtJS Fundamentals</li>
+        </ul></li>
+        <li>JReam
+        <ul>
+            <li>PHP: Create Your Own MVC (In Progress)</li>
+        </ul>
+        </li>
+        <li>Vue Mastery
+        <ul>
+        <li>Intro to Vue.js (In Progress)</li>
+        </ul></li>
+                <li>Other Resources
+                <ul>
+                    <li>Linux Survival</li>
+                    <li>MDN Tutorials</li>
+                    <li>W3Schools Tutorials</li>
+                    <li>RegexOne</li>
+                    <li>The Nature of Code by Daniel Shiffman</li>
+                </ul>
+                </li>
+            </ul>
+            <p class="text-center">I am continuing to complete additional courses to expand my knowledge and skillset.</p>
+        </div>
+            <!--Portfolio Section -->
+            <a id="projects"></a>
+            <!--Portfolio Section -->
+            <div class="block">
+            <h2 class="text-center">Project Examples
+            </h2>
+            <hr>
+            <div class="project-items">
+                <div class="project">
+                <a class="project-link" href="http://www.qlifts.com/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025534/qlifts_g7geoj.jpg" alt="Qlifts">
+                    <p>My first assignment from my employer. (2018)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="https://www.rasap.org/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025535/rasap_yetsvp.jpg" alt="RASAP">
+                    <p>(2018)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="http://www.smithriversmiles.com/" target="_blank">
+                    <img class="project-image"  src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025535/smithriversmiles_ytg07b.jpg" alt="Smith River Smiles">
+                    <p>(2018)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="http://www.familywellnessdpc.com/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025532/familywellness_ty0hus.jpg" alt="Family Wellness">
+                    <p>(2018)</p>
+                </a>
+                </div>
+                <div class="project">
+                <iframe width="315" style="border:none;" src="https://www.youtube.com/embed/M2hUObsYG6U" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>(2018)</p>
+                </div>
+                <div class="project">
+                <a class="project-link" href="https://www.rcedc.com/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025534/rcedc_adyup9.jpg" alt="Randolph County Economic Development Corporation">
+                    <p>(2018)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="http://www.vcwwestpiedmont.com/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025541/vcwwestpiedmont_ohbijy.jpg" alt="Virginia Career Works">
+                    <p>(2018)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="http://www.adkinshomebuilders.com/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025532/adkinshomebuilders_g5tedy.jpg" alt="Adkins Home Builders">
+                    <p>(2018)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="http://www.adkinsapartments.com/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025533/adkinsapartments_uxgvbk.jpg" alt="Adkins Apartments">
+                    <p>(2018)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="http://www.debbiesflooring.com/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025535/debbiesflooring_gfzaz4.jpg" alt="Debbie's Flooring">
+                    <p>(2018)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="http://www.martinsvillecollision.com/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025534/martinsvillecollision_f4vy7c.jpg" alt="Martinsville Collision">
+                    <p>(2018)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="https://www.kingcroppfood.com/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025531/kingcroppfood_slrpkh.jpg" alt="King Cropp Food">
+                    <p>(2018)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="http://www.doorsandmoreusa.com/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025532/doorsandmore_xmdwpk.jpg" alt="Doors and More">
+                    <p>(2018)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="https://www.adams-fisk.com/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025532/adamsfisk_ehjjbn.jpg" alt="Adams and Fisk">
+                    <p>(2019)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="http://www.dpchamber.org/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025530/dpchamber_zed9uc.jpg" alt="Danville-Pittsylvania County Chamber of Commerce">
+                    <p>(2019)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="https://www.statelineaesthetics.com/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025536/statelineaesthetics_g0qaj2.jpg" alt="Stateline Aesthetics">
+                    <p>(2019)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="https://www.statelineheart.com/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025536/statelineheart_zrr5px.jpg" alt="Stateline Heart">
+                    <p>(2019)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="https://www.opportunityneighborhoods.com/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025534/opportunityneighborhoods_lou7fn.jpg" alt="Opportunity Neighborhoods">
+                    <p>(2019)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="https://www.ggbslawfirm.com/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1568025531/gardnerbarrowandsharpe_gxsg9k.jpg" alt="Gardner, Barrow, and Sharpe">
+                    <p>(2019)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="https://www.martinsville.k12.va.us/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1572272871/mcpsdistrict_lmumq5.jpg" alt="Martinsville City Public Schools District Site">
+                    <p>(2019)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="https://cecc.martinsville.k12.va.us/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1572273082/cecc_hsvwf6.jpg" alt="Clearview Early Childhood Center Site">
+                    <p>(2019)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="https://phes.martinsville.k12.va.us/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1572273437/phes_bkcwzr.jpg" alt="Patrick Henry Elementary School Site">
+                    <p>(2019)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="https://ahes.martinsville.k12.va.us/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1572273696/ahes_ifntzi.jpg" alt="Albert Harris Elementary School Site">
+                    <p>(2019)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="https://mms.martinsville.k12.va.us/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1572273837/mms_vvf4yu.jpg" alt="Martinsville Middle School Site">
+                    <p>(2019)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="https://mhs.martinsville.k12.va.us/" target="_blank">
+                    <img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1572274163/mhs_peajcg.jpg" alt="Martinsville High School Site">
+                    <p>(2019)</p>
+                </a>
+                </div>
+                <!--
+                <div class="project">
+                <a class="project-link" href="" target="_blank">
+                    <img class="project-image" src="" alt="">
+                    <p></p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="" target="_blank">
+                    <img class="project-image" src="" alt="">
+                    <p></p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="" target="_blank">
+                    <img class="project-image" src="" alt="">
+                    <p></p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="" target="_blank">
+                    <img class="project-image" src="" alt="">
+                    <p></p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="https://codepen.io/hgallop/full/BdjjLa/" target="_blank"><img class="project-image" src="https://res.cloudinary.com/hgallopcloud/image/upload/v1501511387/screenshotTributePageAdriene_hrnmsb.png" alt="Adriene Mishler Tribute Page">
+                    <p>My very first coding project. Created for Free Code Camp. (2017)</p>
+                </a>
+                </div>
+                <div class="project">
+                <a class="project-link" href="https://codepen.io/hgallop/full/dzQxqe/" target="_blank"><img class="project-image" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.dzQxqe.small.bae39972-8da4-406f-9dd5-5282e9bf3693.png" alt="ToDos">
+                    <p>Created with Watch and Code lessons. (2017)</p>
+                </a>
+                </div>
+            </div>
+            <a href="https://codepen.io/hgallop/full/OxPowr/" target="_blank"><img class="profimg" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.OxPowr.small.0026863b-36e3-4219-99f8-80e6dba6563f.png" alt="Experiment with Simple Buttons"></a>
+            <a href="https://codepen.io/hgallop/full/JrYKNx/" target="_blank"><img class="profimg" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.JrYKNx.small.85436d6e-cc51-4963-8fd3-44ca33cbe75c.png" alt="Upload and Display Grayscale Image"></a>
+            <a href="https://codepen.io/hgallop/full/NaGwQw/" target="_blank"><img class="profimg" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.NaGwQw.small.548ec740-a88f-4d2b-b182-8a75761bbed1.png" alt="Green Screen Project"></a>
+            <a href="https://codepen.io/hgallop/full/veLEOL/" target="_blank"><img class="profimg" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.veLEOL.small.55284eab-0c9f-46e7-9aca-6ce2630a4090.png" alt="Fun with Images"></a>
+            <a href="https://codepen.io/hgallop/full/veJYaY/" target="_blank"><img class="profimg" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.veJYaY.small.c9422471-f7a0-45c0-9e85-d338dd6a9c49.png" alt="Todos with Styling"></a>
+            <a href="https://codepen.io/hgallop/full/xPRpmx/" target="_blank"><img class="profimg" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.xPRpmx.small.94813a8c-6faa-45e7-ade3-cdea29d851fb.png" alt="Simple Slide Show"></a>
+            <a href="https://codepen.io/hgallop/full/MObrdx/" target="_blank"><img class="profimg" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.MObrdx.small.41421386-a7b7-46e5-a4c1-0a53f3d32af7.png" alt="Simple Word Game"></a>
+            <a href="https://codepen.io/hgallop/full/EobwRJ/" target="_blank"><img class="profimg" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.EobwRJ.small.46dbec28-124b-45e5-94b4-2509420eba26.png" alt="Random Quote Machine"></a>
+            <a href="https://codepen.io/hgallop/full/xppjYL/" target="_blank"><img class="profimg" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.xppjYL.small.6d9f67f9-8539-4ccb-8b67-bd8f0d2cb120.png" alt="Local Weather App"></a>
+            <a href="https://codepen.io/hgallop/full/xpYgxB/" target="_blank"><img class="profimg" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1392396.xpYgxB.small.a3815646-2f14-48bc-833b-7e534fced5dc.png" alt="Wikipedia Search"></a>
+            <a href="https://codepen.io/hgallop/full/MrGyya/" target="_blank"><img class="profimg" src="http://res.cloudinary.com/hgallopcloud/image/upload/c_scale,w_384/v1522589761/twitchtvstreamers_l00t64.jpg" alt="Twitch.tv Stream List"></a>-->
+        </div>
+        </div>
+            <!--Social media buttons Connect Section -->
+            <a id="connect"></a>
+            <div class="block">
+            <h2 class="text-center">Connect</h2>
+            <hr>
+            <div class="connect text-center row">
+                <div class="col-md"><a target="_Blank" href="https://www.linkedin.com/in/heather-gallop-41779a14a/"><button class="btn btn-primary fab fa-linkedin" aria-hidden="true">&nbsp; &nbsp;LinkedIn</button></a></div>
+                <div class="col-md"><a target="_Blank" href="https://www.upwork.com/o/profiles/users/_~01ebe670ee8373aa93/"><button class="btn fab upwork-button" aria-hidden="true">&nbsp; &nbsp;Upwork</button></a></div>
+                <a href=""></a>
+                <div class="col-md"><a target="_Blank" href="https://codepen.io/hgallop/"><button class="btn butcol fab fa-codepen" >&nbsp;&nbsp;CodePen</button></a></div>
+                <div class="col-md"><a target="_Blank" href="https://github.com/hgallop"><button class="btn butcol fab fa-github" >&nbsp;&nbsp;GitHub</button></a></div>
+                <div class="col-md"><a target="_Blank" href="https://medium.com/@doyouseeitmyway"><button class="btn butcol fab fa-medium-m" >&nbsp;&nbsp;Medium</button></a></div>
+                <div class="col-md"><a target="_Blank" href="https://www.facebook.com/heather.fretwell.3"><button class="btn btn-primary fab fa-facebook" aria-hidden="true">&nbsp;&nbsp;Facebook</button></a></div>
+                <div class="col-md"><a target="_Blank" href="https://www.pinterest.com/hgallop276/"><button class="btn btn-danger fab fa-pinterest">&nbsp;&nbsp;Pinterest</button></a>
+                </div>
+            </div>
+            </div>
+            <footer class="text-center">
+                <p>Coded by hgallop</p>
+                <a href="https://www.gitkraken.com/invite/iPW7aWGX" target="_blank">Use My Referral Link for Git Kraken</a><br>
+                <a href="https://www.paypal.com/paypalme2/hgallop276" target="_blank">Give a $ Gift</a>
+            </footer>
+        </div>
+    </body>
+</html>
