@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="165 40 350 420">
+  <!-- HG Favicon -->
+  <path d="M340 50 L500 140 L500 360 L340 450 L180 360 L180 140 Z" fill="#0f0f11"/>
+  <path d="M340 50 L500 140 L500 360 L340 450 L180 360 L180 140 Z" fill="none" stroke="#4ade80" stroke-width="2.4"/>
+  <text x="290" y="310" text-anchor="middle" fill="#4ade80" font-family="Georgia,serif" font-size="120px" opacity="0.18">H</text>
+  <text x="396" y="310" text-anchor="middle" fill="#4ade80" font-family="Georgia,serif" font-size="120px" opacity="0.18">G</text>
+  <path d="M340 395C339 365,337 340,338 310C339 280,340 250,340 220" stroke="#4ade80" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+  <path d="M340 220L340 180" stroke="#4ade80" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M340 245C358 232,385 215,408 200" stroke="#4ade80" stroke-width="3.5" fill="none" stroke-linecap="round" opacity=".85"/>
+  <path d="M385 215C395 205,408 192,416 180" stroke="#4ade80" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".65"/>
+  <path d="M408 200C420 195,432 188,440 180" stroke="#4ade80" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".55"/>
+  <path d="M408 200C418 205,430 208,438 205" stroke="#4ade80" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".4"/>
+  <path d="M395 208C402 215,412 220,420 218" stroke="#4ade80" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".35"/>
+  <path d="M340 255C320 240,292 222,268 210" stroke="#4ade80" stroke-width="3.5" fill="none" stroke-linecap="round" opacity=".85"/>
+  <path d="M292 222C280 212,265 200,255 188" stroke="#4ade80" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".65"/>
+  <path d="M268 210C255 204,242 195,235 185" stroke="#4ade80" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".55"/>
+  <path d="M268 210C256 212,244 215,237 218" stroke="#4ade80" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".4"/>
+  <path d="M282 216C272 222,260 228,250 225" stroke="#4ade80" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".35"/>
+  <path d="M340 215C355 200,372 182,388 170" stroke="#4ade80" stroke-width="2.8" fill="none" stroke-linecap="round" opacity=".75"/>
+  <path d="M372 182C382 174,395 162,400 152" stroke="#4ade80" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".55"/>
+  <path d="M388 170C398 167,408 162,414 155" stroke="#4ade80" stroke-width="1.4" fill="none" stroke-linecap="round" opacity=".45"/>
+  <path d="M340 220C325 202,308 185,292 172" stroke="#4ade80" stroke-width="2.8" fill="none" stroke-linecap="round" opacity=".75"/>
+  <path d="M308 185C296 176,282 165,275 155" stroke="#4ade80" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".55"/>
+  <path d="M292 172C280 167,268 162,260 158" stroke="#4ade80" stroke-width="1.4" fill="none" stroke-linecap="round" opacity=".45"/>
+  <path d="M340 180C342 162,344 142,346 125" stroke="#4ade80" stroke-width="3.2" fill="none" stroke-linecap="round" opacity=".8"/>
+  <path d="M344 148C352 138,362 126,368 115" stroke="#4ade80" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".55"/>
+  <path d="M344 145C336 132,326 120,318 110" stroke="#4ade80" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".55"/>
+  <path d="M346 125C348 112,350 100,348 90" stroke="#4ade80" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".65"/>
+  <path d="M348 105C356 96,362 88,365 80" stroke="#4ade80" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".4"/>
+  <path d="M348 108C340 98,332 90,326 82" stroke="#4ade80" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".4"/>
+  <path d="M255 188C248 180,244 172,242 165" stroke="#4ade80" stroke-width="1" fill="none" stroke-linecap="round" opacity=".3"/>
+  <path d="M416 180C422 172,426 164,428 156" stroke="#4ade80" stroke-width="1" fill="none" stroke-linecap="round" opacity=".3"/>
+  <circle cx="416" cy="176" r="8" fill="#4ade80" opacity=".18"/>
+  <circle cx="440" cy="177" r="6" fill="#4ade80" opacity=".14"/>
+  <circle cx="438" cy="202" r="5" fill="#4ade80" opacity=".11"/>
+  <circle cx="420" cy="215" r="4.5" fill="#4ade80" opacity=".1"/>
+  <circle cx="428" cy="154" r="5" fill="#4ade80" opacity=".13"/>
+  <circle cx="414" cy="153" r="5.5" fill="#4ade80" opacity=".14"/>
+  <circle cx="255" cy="184" r="8" fill="#4ade80" opacity=".18"/>
+  <circle cx="235" cy="182" r="6" fill="#4ade80" opacity=".14"/>
+  <circle cx="237" cy="215" r="5" fill="#4ade80" opacity=".11"/>
+  <circle cx="250" cy="223" r="4.5" fill="#4ade80" opacity=".1"/>
+  <circle cx="260" cy="155" r="5.5" fill="#4ade80" opacity=".14"/>
+  <circle cx="242" cy="162" r="5" fill="#4ade80" opacity=".12"/>
+  <circle cx="256" cy="133" r="4.5" fill="#4ade80" opacity=".12"/>
+  <circle cx="388" cy="166" r="7" fill="#4ade80" opacity=".16"/>
+  <circle cx="400" cy="148" r="5.5" fill="#4ade80" opacity=".14"/>
+  <circle cx="292" cy="168" r="7" fill="#4ade80" opacity=".16"/>
+  <circle cx="275" cy="152" r="5.5" fill="#4ade80" opacity=".14"/>
+  <circle cx="368" cy="112" r="6.5" fill="#4ade80" opacity=".17"/>
+  <circle cx="318" cy="106" r="6.5" fill="#4ade80" opacity=".17"/>
+  <circle cx="365" cy="77" r="5" fill="#4ade80" opacity=".14"/>
+  <circle cx="326" cy="78" r="5" fill="#4ade80" opacity=".14"/>
+  <circle cx="348" cy="86" r="7" fill="#4ade80" opacity=".18"/>
+  <circle cx="346" cy="120" r="5.5" fill="#4ade80" opacity=".15"/>
+  <circle cx="415" cy="130" r="4.5" fill="#4ade80" opacity=".11"/>
+  <path d="M340 395C332 410,310 425,285 432C260 438,238 435,222 428" stroke="#4ade80" stroke-width="3.5" fill="none" stroke-linecap="round" opacity=".5"/>
+  <path d="M340 395C348 410,370 425,395 432C420 438,442 435,458 428" stroke="#4ade80" stroke-width="3.5" fill="none" stroke-linecap="round" opacity=".5"/>
+  <path d="M340 395C335 408,320 420,305 428C290 435,272 438,258 436" stroke="#4ade80" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".35"/>
+  <path d="M340 395C345 408,360 420,375 428C390 435,408 438,422 436" stroke="#4ade80" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".35"/>
+  <path d="M340 395C338 405,332 415,325 420" stroke="#4ade80" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".22"/>
+  <path d="M340 395C342 405,348 415,355 420" stroke="#4ade80" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".22"/>
+  <path d="M222 428C215 424,208 418,205 412" stroke="#4ade80" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".2"/>
+  <path d="M458 428C465 424,472 418,475 412" stroke="#4ade80" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".2"/>
+</svg>
